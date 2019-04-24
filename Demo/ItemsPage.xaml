@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WordBankEasy.Views.ItemsPage"
+             xmlns:local="clr-namespace:PSC.Xam.Components.TagEntry;assembly=PSC.Xam.Components.TagEntry"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+        <local:TagEntryView x:Name="tagEntryStart" TagItems="{Binding WordStartItems}"
+                             Placeholder="Start Word" PlaceholderColor="{DynamicResource baseColor}"
+                            TagTappedCommand="{Binding RemoveTagCommand}">
+            <local:TagEntryView.TagItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="{StaticResource baseColor}" OutlineColor="Transparent" 
+                           Padding="10,5" HasShadow="false" CornerRadius="5">
+                        <Label Text="{Binding Name}" TextColor="White" />
+                    </Frame>
+                </DataTemplate>
+            </local:TagEntryView.TagItemTemplate>
+        </local:TagEntryView>
+
+        <BoxView Style="{StaticResource GreenLine}" />
+
+        <local:TagEntryView x:Name="tagEntryEnd" TagItems="{Binding WordEndItems}" Placeholder="End Word" PlaceholderColor="{DynamicResource baseColor}"
+                            TagTappedCommand="{Binding RemoveTagCommand}">
+            <local:TagEntryView.TagItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="{StaticResource baseColor}" OutlineColor="Transparent" 
+                           Padding="10,5" HasShadow="false" CornerRadius="5">
+                        <Label Text="{Binding Name}" TextColor="White" />
+                    </Frame>
+                </DataTemplate>
+            </local:TagEntryView.TagItemTemplate>
+        </local:TagEntryView>
+    </StackLayout>
+</ContentPage>

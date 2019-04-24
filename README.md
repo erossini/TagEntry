@@ -10,3 +10,13 @@
 - Flowing layout
 - TagTapped event
 - All Xamarin.Forms platforms supported
+
+## Screenshots
+
+### iOS (iPad)
+
+![Screenshot for iPad](/Screenshots/TagEntry_iOS.png)
+
+### UWP
+
+![Screenshot for UWP](/Screenshots/TagEntry_UWP.PNG)
