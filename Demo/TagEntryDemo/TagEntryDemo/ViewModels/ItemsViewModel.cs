@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-using WordBankEasy.Models;
-using WordBankEasy.Views;
-using System.Windows.Input;
-using System.Linq;
+using TagEntryDemo.Models;
+using TagEntryDemo.Views;
 using PSC.Xam.Components.TagEntry.Models;
+using System.Linq;
+using System.Windows.Input;
 
-namespace WordBankEasy.ViewModels
+namespace TagEntryDemo.ViewModels
 {
     public class ItemsViewModel : BaseViewModel
     {

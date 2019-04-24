@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="WordBankEasy.Views.ItemsPage"
+             x:Class="TagEntryDemo.Views.ItemsPage"
              xmlns:local="clr-namespace:PSC.Xam.Components.TagEntry;assembly=PSC.Xam.Components.TagEntry"
-             Title="{Binding Title}"
+              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
 
     <ContentPage.ToolbarItems>
@@ -23,8 +23,6 @@
                 </DataTemplate>
             </local:TagEntryView.TagItemTemplate>
         </local:TagEntryView>
-
-        <BoxView Style="{StaticResource GreenLine}" />
 
         <local:TagEntryView x:Name="tagEntryEnd" TagItems="{Binding WordEndItems}" Placeholder="End Word" PlaceholderColor="{DynamicResource baseColor}"
                             TagTappedCommand="{Binding RemoveTagCommand}">

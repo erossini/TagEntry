@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using WordBankEasy.Models;
-using WordBankEasy.Views;
-using WordBankEasy.ViewModels;
+using TagEntryDemo.Models;
+using TagEntryDemo.Views;
+using TagEntryDemo.ViewModels;
 
-namespace WordBankEasy.Views
+namespace TagEntryDemo.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
@@ -20,7 +20,6 @@ namespace WordBankEasy.Views
     public partial class ItemsPage : ContentPage
     {
         ItemsViewModel viewModel;
-
         public List<string> mySeparators = new List<string>() { "*" };
 
         public ItemsPage()
@@ -28,7 +27,7 @@ namespace WordBankEasy.Views
             InitializeComponent();
 
             tagEntryEnd.TagValidatorFactory = new Func<string, object>(
-                            (arg) => viewModel?.ValidateAndReturn2(arg));
+                (arg) => viewModel?.ValidateAndReturn2(arg));
             tagEntryStart.TagValidatorFactory = new Func<string, object>(
                           (arg) => viewModel?.ValidateAndReturn(arg));
 
@@ -44,9 +43,6 @@ namespace WordBankEasy.Views
                 return;
 
             await Navigation.PushAsync(new ItemDetailPage(new ItemDetailViewModel(item)));
-
-            // Manually deselect item.
-            //ItemsListView.SelectedItem = null;
         }
 
         async void AddItem_Clicked(object sender, EventArgs e)
