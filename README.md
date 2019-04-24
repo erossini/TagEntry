@@ -11,6 +11,9 @@
 - TagTapped event
 - All Xamarin.Forms platforms supported
 
+## Demo
+In the `Demo` folder you find an example how to use this component.
+
 ## Screenshots
 
 ### iOS (iPad)
